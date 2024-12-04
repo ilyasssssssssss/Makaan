@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .icon{
+    border: #00b894 2px;
+    border-style:dotted;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    }
+    /* Navbar Styles */
+    .navbar {
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #00b894;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #4b4b4b;
+    }
+
+    .nav-link:hover {
+      color: #00b894;
+    }
+
+    .btn-add-property {
+      background-color: #00b894;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 15px;
+      margin-left: 20px;
+    }
+
+    .btn-add-property:hover {
+      background-color: #019875;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 80px 0;
+      background-color: #e8f8f5;
+    }
+
+   
+
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2d3436;
+    }
+
+    .hero-title span {
+      color: #00b894;
+    }
+
+    .hero-text {
+      font-size: 1.2rem;
+      color: #636e72;
+      margin-bottom: 20px;
+    }
+
+    .hero-btn {
+      background-color: #00b894;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 14px;
+      width: 220px;
+    }
+
+    .hero-btn:hover {
+      background-color: #019875;
+    }
+
+    .hero-image {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    /* Search Form */
+    .search-form {
+      background-color: #00b894;
+      padding: 20px 40px;
+      border-radius: 12px;
+      /* margin-top: -40px; */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-form input, .search-form select, .search-form button {
+      border-radius: 30px;
+      padding: 10px 15px;
+    }
+
+    .search-form button {
+      background-color: #2d3436;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+    }
+
+    .search-form button:hover {
+      background-color: #636e72;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Section Styles */
+    .property-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .property-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 10px;
+    }
+
+    .property-section p {
+      font-size: 1rem;
+      color: #636e72;
+      margin-bottom: 40px;
+    }
+
+    /* Card Styles */
+    .property-card {
+      background-color: #ffffff;
+      border: 1px solid #00b894;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card-icon{
+      border: #00b894 2px;
+      border-style:dotted;
+      border-radius: 50%;
+      padding: 20px;
+      margin: 20px;
+    }
+    .property-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .property-icon {
+      font-size: 2.5rem;
+      color: #00b894;
+      margin-bottom: 15px;
+    }
+
+    .property-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #2d3436;
+    }
+
+    .property-count {
+      font-size: 1rem;
+      color: #00b894;
+    }
+    .property-section {
+      display: flex;
+      align-items: center;
+      padding: 50px;
+    }
+    .property-section img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .property-details {
+      padding-left: 30px;
+      justify-content: center;
+      margin-top: 80px;
+    }
+    .property-details h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .property-details p {
+      margin-bottom: 20px;
+    }
+    .property-details ul {
+      list-style: none;
+      padding: 0;
+    }
+    .property-details ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .property-details ul li i {
+      color: #00b894;
+      margin-right: 10px;
+    }
+    .down{
+      line-height: 50px
+    }
+    .read-more-btn {
+      background-color: #00b894;
+      color: white;
+      padding: 18px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      height: 60px;
+      position:relative ;
+      right: 180px;
+      margin-top: 10px;
+      
+    }
+    .btn-right{
+      position: relative;
+      left: 1050px;
+      margin-bottom:30px;
+      padding-right: 30px;
+    }
+    .text{
+      width: 660px;
+      color: grey;
+    }
+    .btn-right{
+      color: #00b894;
+      border: 2px #00b894;
+    }
+    .property-image {
+      height:100%;
+      object-fit:cover;
+    }
+    .property-details {
+      padding: 0px;
+    }
+    .property-price {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #00b894;
+      margin-left: 25px;
+    }
+    .text-2{
+      margin-left: 25px;
+    }
+    .property-address {
+      margin-bottom: 10px;
+      margin-left: 25px;
+    }
+    .property-features {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: #00b894 1px solid;
+      border-top-style: dotted;
+      width: 100%;
+      padding: 20px;
+    }
+    .property-feature-icon {
+      margin-right: 5px;
+    }
+    .card-btn{
+      background-color: #00b894;
+      color: #fff;
+      font-weight: 600;
+      font-size: 10px;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      width: 80px;
+      position: relative;
+      right: 130px;
+      top: 60px;
+    }
+    .but-right{
+      border: #00b894 2px solid;
+    }
+    .but-right:hover{
+      color: #fff;
+      background-color: #00b894;
+    }
+    .iconns{
+      color: #00b894;
+    }
+    .browse-btn{
+      background-color: #00b894;
+      color: #fff;
+      height: 70px;
+      width: 270px;
+      font-weight: 600;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 50px 0px 100px;
+    }
+    .call{
+      background-color: #00b894;
+      color: #fff;
+      height: 60px;
+      width: 170px;
+      font-weight: 600;
+      border-radius: 6px;
+      margin: 10px 20px 0px 80px;
+      border: none;
+    }
+    .appointement{
+      background-color: #212658;
+      color: #fff;
+      height: 60px;
+      width: 200px;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 10px 20px;
+      border: none; 
+    }
+    .title{
+      color: #212658;
+      padding-left:80px;
+      margin-bottom: 30px;
+    }
+    .loremm{
+      padding-left:80px;
+      margin-bottom: 30px;
+      
+    }
+    .agent-card {
+            background-color: #fff;
+            border-radius: 10px;
+            width: 310px;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            margin: 15px;
+        }
+        .agent-card img {
+            border-radius: 4px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        .social-icons a {
+            margin: 0 5px;
+            color: #00b894;
+            font-size: 20px;
+            border: #fff 1px solid;
+            border-radius: 50%;
+            padding: 10px;
+            background-color: #fff;
+            position: relative;
+            bottom: 115px;
+        }
+        .prop{
+          color: #212658;
+          margin-bottom: 30px;
+          margin-top: 200px;
+        }
+        .name{
+          color: #212658;
+          margin-top: 10px;
+        }
+        body {
+      background-color: #f6fff9;
+    }
+
+    .testimonial-card {
+      background-color: #e6f7ed;
+      border: 1px dashed #a3e4c0;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .client-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .testimonial-arrows {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #00c897;
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .testimonial-arrows:hover {
+      background-color: #019d75;
+        }
+        .footer {
+          height: 350px;
+            background-color: #001b47;
+            color: white;
+            padding: 40px;
+            margin: 30px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .newsletter input[type="email"] {
+            width: 70%;
+            padding: 5px;
+        }
+        .socials{
+          margin: 10px;
+        }
+        .newsletter button {
+            padding: 5px 10px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+        }
+        .imagefooter{
+          margin: 10px;
+        }
+        .client{
+          color: #001b47;
+          margin-top: 100px;
+        }
+        .signup-btn{
+          background-color: #00b894;
+          color: #fff;
+          height: 50px;
+          width:75px;
+          border-radius: 4px;
+          margin: 10px 20px 0px 80px;
+          border: none;
+          position: relative;
+          bottom: 70px;
+          left: 120px;
+        }
+        .mail{
+          height: 70px;
+          border-radius: 5px;
+          background-color: #001b47;
+          margin-top: 10px;
+          padding: 30px;
+
+        }
+        .gallery{
+          margin-left:-25px;
+          margin-right: 20px;
+        }
+        .socials{
+          border: #fff solid 1px;
+          border-radius: 50%;
+          padding: 6px;
+        }
+        .titlenews{
+          margin-bottom: 40px;
+        }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <div class="icon p-2 me-2 ">
+            <img class="img-fluid  " src="./images/la-cooperation.png" alt="Icon" style="width: 30px; height: 30px;" class="icon">
+        </div>
+      <a class="navbar-brand" href="#">Makaan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="propertyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Property
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="propertyDropdown">
+              <li><a class="dropdown-item" href="#">Property List</a></li>
+              <li><a class="dropdown-item" href="#">Property Type</a></li>
+              <li><a class="dropdown-item" href="#">Property Agent</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-add-property" href="#">Add Property</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="hero-title">
+            Find A <span>Perfect Home</span> To Live With Your Family
+          </h1>
+          <p class="hero-text">
+            Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebmu ipsum et diam justo clita et kasd rebmu sea elitr.
+          </p>
+          <button class="btn hero-btn p-4">Get Started</button>
+        </div>
+        <div class="col-md-6">
+          <img src="./images/villa image.jpg" alt="Property Image" class="hero-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Form -->
+  <div class="container">
+    <div class="search-form d-flex justify-content-center align-items-center">
+      <div class="row w-100">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <input type="text" class="form-control" placeholder="Search Keyword">
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <select class="form-control">
+            <option>Property Type</option>
+            <option>House</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+          </select>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <input type="text" class="form-control" placeholder="Location">
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-primary w-100">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Property Types Section -->
+    <section class="property-section">
+        <div class="container">
+          <h2>Property Types</h2>
+          <p>Explore various property types to find the perfect fit for your needs.</p>
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-3">
+              <div class="property-card">
+                <div class="property-icon">
+                  <i class="fas fa-building card-icon"></i>
+                </div>
+                <h3 class="property-title">Apartment</h3>
+                <p class="property-count">123 Properties</p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-3">
+              <div class="property-card">
+                <div class="property-icon">
+                  <i class="fas fa-home card-icon"></i>
+                </div>
+                <h3 class="property-title">Villa</h3>
+                <p class="property-count ">123 Properties</p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-3">
+              <div class="property-card">
+                <div class="property-icon">
+                  <i class="fas fa-house-user card-icon"></i>
+                </div>
+                <h3 class="property-title">Home</h3>
+                <p class="property-count ">123 Properties</p>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-3">
+              <div class="property-card">
+                <div class="property-icon">
+                  <i class="fas fa-briefcase card-icon"></i>
+                </div>
+                <h3 class="property-title">Office</h3>
+                <p class="property-count ">123 Properties</p>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-3">
+              <div class="property-card">
+                <div class="property-icon">
+                  <i class="fas fa-city card-icon"></i>
+                </div>
+                <h3 class="property-title">Building</h3>
+                <p class="property-count ">123 Properties</p>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-3">
+              <div class="property-card">
+                <div class="property-icon">
+                  <i class="fas fa-store card-icon"></i>
+                </div>
+                <h3 class="property-title">Townhouse</h3>
+                <p class="property-count  ">123 Properties</p>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col-md-3">
+              <div class="property-card">
+                <div class="property-icon">
+                  <i class="fas fa-warehouse card-icon"></i>
+                </div>
+                <h3 class="property-title">Shop</h3>
+                <p class="property-count ">123 Properties</p>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col-md-3">
+              <div class="property-card">
+                <div class="property-icon">
+                  <i class="fas fa-house-damage card-icon"></i>
+                </div>
+                <h3 class="property-title">Garage</h3>
+                <p class="property-count">123 Properties</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container property-section">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="./images/img piscine.jpg" alt="Property Image" class="hero-image imgg">
+          </div>
+          <div class="col-md-6 property-details">
+            <h2>#1 Place To Find The Perfect Property</h2>
+            <p class="property-par">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
+            <ul>
+              <li><i class="fa fa-check down"></i> Tempor erat elitr rebum at clita</li>
+              <li><i class="fa fa-check down"></i> Aliqu diam amet diam et eos</li>
+              <li><i class="fa fa-check down"></i> Clita duo justo magna dolore erat amet</li>
+            </ul>
+            <a href="#" class="read-more-btn hero-btn btn ">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h1 class="text-start mt-5">Property Listing</h1>
+        <p class="text-start text">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit diam justo sed rebum.</p>
+        <div class="btn-right">
+          <button class="btn btn-outline btn-sm p-2 but-right">Featured</button>
+          <button class="btn btn-outline btn-sm p-2 but-right">For sell</button>
+          <button class="btn btn-outline btn-sm p-2 but-right">For rent</button>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <div>
+                        <button class="card-btn ">For Sell</button>
+                    </div>
+                    <img src="/Images/villa1.jfif" class="card-img-top property-image" alt="Apartment" > 
+                    <div class="card-body property-details">
+                        <h5 class="property-price text-start ">$12,345</h5>
+                        <p class="text-start fw-bold text-2">Golden Urban House For Sell</p>
+                        <p class="property-address text-start text-secondary"> <span><img src="./images/localisateur.png"></span class=""> 123 Street, New York, USA</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed property-feature-icon iconns"></i>
+                                <span class="bed">3 Bed</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath property-feature-icon iconns"></i>
+                                <span class=" bed">2 Bath</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-ruler property-feature-icon iconns"></i>
+                                <span class="sqft">1000 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <div>
+                        <button class=" card-btn">For rent</button>
+                    </div>
+                    <img src="./images/villa2.jfif" class="card-img-top property-image" alt="Villa">
+                    <div class="card-body property-details">
+                        <h5 class="property-price text-start ">$12,345</h5>
+                        <p class="text-start fw-bold text-2">Golden Urban House For Sell</p>
+                        <p class="property-address text-start text-secondary "><span><img src="./images/localisateur.png"></span class=""> 123 Street, New York, USA</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed property-feature-icon iconns"></i>
+                                <span>3 Bed</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath property-feature-icon iconns"></i>
+                                <span>2 Bath</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-ruler property-feature-icon iconns"></i>
+                                <span class="sqft">1000 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <div >
+                        <button class="card-btn">For Sell</button>
+                    </div>
+                    <img src="./images/villa3.jfif" class="card-img-top property-image" alt="Office">
+                    <div class="card-body property-details">
+                        <h5 class="property-price text-start ">$12,345</h5>
+                        <p class="text-start fw-bold text-2">Golden Urban House For Sell</p>
+                        <p class="property-address text-start text-secondary"> <span><img src="./images/localisateur.png"></span class=""> 123 Street, New York, USA</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed property-feature-icon iconns"></i>
+                                <span>3 Bed</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath property-feature-icon iconns"></i>
+                                <span>2 Bath</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-ruler property-feature-icon iconns"></i>
+                                <span class="sqft">1000 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <div >
+                        <button class="card-btn">For rent</button>
+                    </div>
+                    <img src="./images/villa4.jfif" class="card-img-top property-image" alt="Building">
+                    <div class="card-body property-details">
+                        <h5 class="property-price text-start ">$12,345</h5>
+                        <p class="text-start fw-bold text-2">Golden Urban House For Sell</p>
+                        <p class="property-address text-start text-secondary "> <span><img src="./images/localisateur.png"></span class=""> 123 Street, New York, USA</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed property-feature-icon iconns"></i>
+                                <span>3 Bed</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath property-feature-icon iconns"></i>
+                                <span>2 Bath</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-ruler property-feature-icon iconns"></i>
+                                <span class="sqft">1000 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card property-card ">
+                    <div >
+                        <button class="card-btn">For Sell</button>
+                    </div>
+                    <img src="./images/villa5.jfif" class="card-img-top property-image" alt="Home">
+                    <div class="card-body property-details">
+                        <h5 class="property-price text-start ">$12,345</h5>
+                        <p class="text-start fw-bold text-2">Golden Urban House For Sell</p>
+                        <p class="property-address text-start text-secondary"> <span><img src="./images/localisateur.png"></span class=""> 123 Street, New York, USA</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed property-feature-icon iconns"></i>
+                                <span>3 Bed</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath property-feature-icon iconns"></i>
+                                <span>2 Bath</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-ruler property-feature-icon iconns"></i>
+                                <span class="sqft">1000 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <div >
+                        <button class="card-btn">For rent</button>
+                    </div>
+                    <img src="./images/villa3.jfif" class="card-img-top property-image" alt="Shop">
+                    <div class="card-body property-details">
+                        <h5 class="property-price text-start ">$12,345</h5>
+                        <p class="text-start fw-bold text-2">Golden Urban House For Sell</p>
+                        <p class="property-address text-start"> <span><img src="./images/localisateur.png"></span class=""> 123 Street, New York, USA</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed property-feature-icon iconns"></i>
+                                <span>3 Bed</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath property-feature-icon iconns"></i>
+                                <span>2 Bath</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-ruler property-feature-icon iconns"></i>
+                                <span class="sqft">1000 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="text-center d-flex justify-content-center">
+          <button class=" browse-btn">Browse more property</button>
+        </div>
+
+    <div class="container mt-5">
+      <div class="row">
+          <div class="col-12">
+              <div class="contact-card d-flex align-items-center">
+                  <div class="col-md-6">
+                      <img src="./images/businessman.jpg" alt="Agent" class="img-fluid">
+                  </div>
+                  <div class="col-md-6">
+                      <h3 class="fw-bold fs-1 title">Contact With Our Certified Agent</h3>
+                      <p class="text-secondary fs-6 loremm">Eirmod sed ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam justo sed vero dolor duo.</p>
+                      <button type="button" class="call"><i class="fas fa-phone"></i> Make A Call</button>
+                      <button type="button" class="appointement"><i class="fas fa-calendar"></i> Get Appointment</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container text-secondary text-center mt-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold fs-1 prop">Property Agents</h2>
+        <p class="fs-5 prg">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+    </div>
+    <div class="row">
+        <!-- Agent 1 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="agent-card">
+                <img src="./images/profil1.jpg" alt="Agent 1" class="img-fluid">
+                <h5 class="fw-bold name">Full Name</h5>
+                <p>Designation</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Agent 2 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="agent-card">
+                <img src="./images/profil 2.jpg" alt="Agent 2" class="img-fluid">
+                <h5 class="fw-bold name">Full Name</h5>
+                <p>Designation</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Agent 3 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="agent-card">
+                <img src="./images/profil3.jpg" alt="Agent 3" class="img-fluid">
+                <h5 class="fw-bold name">Full Name</h5>
+                <p>Designation</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Agent 4 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="agent-card">
+                <img src="./images/profil4.jpg" alt="Agent 4" class="img-fluid">
+                <h5 class="fw-bold name">Full Name</h5>
+                <p>Designation</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+  <!-- Section Header -->
+  <div class="text-center">
+    <h2 class="fw-bold client">Our Clients Say!</h2>
+    <p class="text-secondary">
+      Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit.
+    </p>
+  </div>
+
+  <!-- Testimonials Row -->
+  <div class="row align-items-center mt-4">
+    <!-- Left Arrow -->
+    <div class="col-md-1 d-flex justify-content-center">
+      <div class="testimonial-arrows">
+        <i class="bi bi-arrow-left arrow"></i>
+      </div>
+    </div>
+
+    <!-- Testimonial Cards -->
+    <div class="col-md-10">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="testimonial-card">
+            <p class="text-secondary">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos.</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="./images/client1.jpg" alt="Client" class="client-photo me-3">
+              <div>
+                <strong>Client Name</strong>
+                <p class="text-secondary mb-0">Profession</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="testimonial-card">
+            <p class="text-secondary">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos.</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="./images/client2.jpg" alt="Client" class="client-photo me-3">
+              <div>
+                <strong>Client Name</strong>
+                <p class="text-secondary mb-0">Profession</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right Arrow -->
+    <div class="col-md-1 d-flex justify-content-center">
+      <div class="testimonial-arrows"> 
+        <i class="bi bi-arrow-right"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer mt-6">
+  <div class="container-fluid">
+      <div class="row ">
+          <div class="col-md-3">
+              <h5 class="fw-bold">Get In Touch</h5>
+              <p class="text-secondary">123 Street, New York, USA</p>
+              <p class="text-secondary">+012 345 67890</p>
+              <p class="text-secondary">info@example.com</p>
+              <div>
+                  <a href="#" class="socials"><i class="fab fa-twitter "></i></a>
+                  <a href="#" class="socials"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="socials"><i class="fab fa-youtube"></i></a>
+                  <a href="#" class="socials"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <h5 class="fw-bold">Quick Links</h5>
+              <ul>
+                  <li><a href="#" class="text-secondary">About Us</a></li>
+                  <li><a href="#" class="text-secondary">Contact Us</a></li>
+                  <li><a href="#" class="text-secondary">Our Services</a></li>
+                  <li><a href="#" class="text-secondary">Privacy Policy</a></li>
+                  <li><a href="#" class="text-secondary">Terms & Condition</a></li>
+              </ul>
+          </div>
+          <div class="col-md-3 gallery">
+              <h5 class="fw-bold">Photo Gallery</h5>
+              <div class="row">
+                  <div class="col-4"><img src="./images/villa1.jfif" alt="Photo" class="img-fluid imagefooter"></div>
+                  <div class="col-4"><img src="./images/villa2.jfif" alt="Photo" class="img-fluid imagefooter"></div>
+                  <div class="col-4"><img src="./images/villa3.jfif" alt="Photo" class="img-fluid imagefooter"></div>
+                  <div class="col-4"><img src="./images/villa4.jfif" alt="Photo" class="img-fluid imagefooter"></div>
+                  <div class="col-4"><img src="./images/villa5.jfif" alt="Photo" class="img-fluid imagefooter"></div>
+                  <div class="col-4"><img src="./images/villa2.jfif" alt="Photo" class="img-fluid imagefooter"></div>
+              </div>
+          </div>
+          <div class="col-md-3 newsletter">
+              <h5 class="fw-bold titlenews">Newsletter</h5>
+              <p class="text-secondary">Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+              <input type="email" placeholder="Your email" class="mail ">
+              <button type="button"class="signup-btn ">SignUp</button>
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+
+      
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
